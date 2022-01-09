@@ -12,3 +12,5 @@ COPY --from=builder app/spring-boot-loader/ ./
 COPY --from=builder app/application/ ./
 ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
 CMD ["--spring.profiles.active=live"]
+
+CMD ["java" , "-jar", "/loan-microservice.jar"]
